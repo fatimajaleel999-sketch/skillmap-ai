@@ -46,7 +46,14 @@ Learning Duration: ${duration}`;
       }
     );
 
-    const data = await response.json();
+   const data = await response.json();
+
+    if (!data.candidates || !data.candidates[0]) {
+      return res.status(500).json({
+        error: "Gemini API error: " + (data.error?.message || JSON.stringify(data)),
+      });
+    }
+
     let text = data.candidates[0].content.parts[0].text;
 
     text = text.replace(/```json/g, "").replace(/```/g, "").trim();
@@ -55,6 +62,6 @@ Learning Duration: ${duration}`;
     res.status(200).json(parsed);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: "Failed to generate roadmap" });
+    res.status(500).json({ error: err.message || "Failed to generate roadmap" });
   }
 }
