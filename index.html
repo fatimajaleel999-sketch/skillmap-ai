@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillMap AI - Your Personal AI Career Mentor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== TOP NAV (always visible) ===== -->
+  <nav class="top-nav">
+    <div class="logo"><i class="fa-solid fa-graduation-cap"></i> SkillMap <span>AI</span></div>
+    <div class="nav-links">
+      <button data-view="view-landing">Home</button>
+      <button data-view="view-resources">Resources</button>
+      <button data-view="view-about">About</button>
+    </div>
+    <button id="startBtn" class="btn-primary btn-small">Start Now</button>
+  </nav>
+
+  <!-- ===== LANDING PAGE ===== -->
+  <section id="view-landing" class="view">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <h1>Your Personal <span>AI Career Mentor</span></h1>
+        <p>Build a personalized learning roadmap with AI based on your career goals and current skills.</p>
+        <div class="hero-buttons">
+          <button id="startBtn2" class="btn-primary">Start Your Journey</button>
+          <button data-view="view-about" class="btn-outline nav-btn">Learn More</button>
+        </div>
+        <div class="hero-tags">
+          <span><i class="fa-solid fa-bolt"></i> AI Powered</span>
+          <span><i class="fa-solid fa-compass"></i> Smart Guidance</span>
+          <span><i class="fa-solid fa-user-check"></i> Personalized</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-card">
+          <i class="fa-solid fa-route visual-icon"></i>
+          <p>Your Roadmap</p>
+        </div>
+        <div class="visual-badge badge-1"><i class="fa-solid fa-star"></i></div>
+        <div class="visual-badge badge-2"><i class="fa-solid fa-check"></i></div>
+        <div class="visual-badge badge-3"><i class="fa-solid fa-chart-line"></i></div>
+      </div>
+    </div>
+
+    <div class="feature-cards">
+      <div class="card">
+        <div class="icon-circle circle-blue"><i class="fa-solid fa-map"></i></div>
+        <h3>Personalized Roadmaps</h3>
+        <p>A month-by-month learning plan built just for your goal.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle circle-coral"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Skill Gap Analysis</h3>
+        <p>See exactly what you already know and what's missing.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle circle-teal"><i class="fa-solid fa-book-open"></i></div>
+        <h3>Learning Resources</h3>
+        <p>Curated free and paid resources to guide your journey.</p>
+      </div>
+      <div class="card">
+        <div class="icon-circle circle-amber"><i class="fa-solid fa-trophy"></i></div>
+        <h3>Certifications</h3>
+        <p>Free and paid certifications that boost your resume.</p>
+      </div>
+    </div>
+
+    <div class="stats-band">
+      <div class="stat"><h4>500+</h4><p>Career Paths</p></div>
+      <div class="stat"><h4>1000+</h4><p>Learning Resources</p></div>
+      <div class="stat"><h4>AI</h4><p>Powered Recommendations</p></div>
+      <div class="stat"><h4>24/7</h4><p>Learning Support</p></div>
+    </div>
+  </section>
+
+  <!-- ===== CAREER FORM PAGE ===== -->
+  <section id="view-form" class="view hidden">
+    <div class="form-container">
+      <div class="page-header">
+        <div class="icon-circle circle-blue"><i class="fa-solid fa-clipboard-list"></i></div>
+        <h2>Tell us about your goals</h2>
+        <p class="subtitle">Answer a few questions so AI can build your roadmap.</p>
+      </div>
+
+      <label><i class="fa-solid fa-user"></i> Your Name</label>
+      <input type="text" id="userName" placeholder="e.g. Fatima" />
+
+      <label><i class="fa-solid fa-comment-dots"></i> A Little About You (optional)</label>
+      <textarea id="personalInfo" placeholder="e.g. I'm a Software Engineering student interested in AI"></textarea>
+
+      <label><i class="fa-solid fa-link"></i> Your Profile Links (optional)</label>
+      <textarea id="profileLinks" placeholder="LinkedIn: linkedin.com/in/yourname&#10;GitHub: github.com/yourusername&#10;Email: you@gmail.com"></textarea>
+
+      <label><i class="fa-solid fa-bullseye"></i> Career Goal</label>
+      <select id="careerGoal">
+        <option>Software Engineer</option>
+        <option>AI Engineer</option>
+        <option>Data Scientist</option>
+        <option>UI/UX Designer</option>
+        <option>Cybersecurity Analyst</option>
+        <option>Mobile App Developer</option>
+        <option>Frontend Developer</option>
+        <option>Backend Developer</option>
+        <option>Cloud Engineer</option>
+      </select>
+
+      <label><i class="fa-solid fa-layer-group"></i> Current Skill Level</label>
+      <select id="skillLevel">
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+
+      <label><i class="fa-solid fa-code"></i> Current Skills</label>
+      <textarea id="currentSkills" placeholder="e.g. Python, HTML, CSS, C++"></textarea>
+
+      <label><i class="fa-regular fa-clock"></i> Available Study Time</label>
+      <select id="studyTime">
+        <option>1 Hour per Day</option>
+        <option>2 Hours per Day</option>
+        <option>3+ Hours per Day</option>
+      </select>
+
+      <label><i class="fa-regular fa-calendar"></i> Learning Duration</label>
+      <select id="duration">
+        <option>1 Month</option>
+        <option>3 Months</option>
+        <option>6 Months</option>
+        <option>1 Year</option>
+      </select>
+
+      <button id="generateBtn" class="btn-primary"><i class="fa-solid fa-wand-magic-sparkles"></i> Generate My Roadmap</button>
+    </div>
+  </section>
+
+  <!-- ===== AI RESULTS PAGE ===== -->
+  <section id="view-results" class="view hidden">
+    <div class="results-wrap">
+      <h2 class="results-title">Your Personalized Roadmap</h2>
+      <div id="loadingMsg" class="hidden"><i class="fa-solid fa-spinner fa-spin"></i> Generating your roadmap...</div>
+      <div id="resultsContent"></div>
+      <button id="backToFormBtn" class="btn-outline"><i class="fa-solid fa-arrow-left"></i> Edit My Answers</button>
+    </div>
+  </section>
+
+  <!-- ===== RESOURCES PAGE ===== -->
+  <section id="view-resources" class="view hidden">
+    <div class="page-container">
+      <div class="page-header">
+        <div class="icon-circle circle-teal"><i class="fa-solid fa-book-open"></i></div>
+        <h2>Learning Resources</h2>
+        <p class="subtitle">Curated resources to accelerate your learning journey.</p>
+      </div>
+
+      <div class="resource-grid">
+        <div class="resource-col">
+          <h3><i class="fa-brands fa-youtube"></i> YouTube Channels</h3>
+          <ul>
+            <li>freeCodeCamp</li>
+            <li>Programming with Mosh</li>
+            <li>CodeWithHarry</li>
+            <li>Krish Naik</li>
+          </ul>
+        </div>
+        <div class="resource-col">
+          <h3><i class="fa-solid fa-file-lines"></i> Documentation</h3>
+          <ul>
+            <li>Python Official Docs</li>
+            <li>React Documentation</li>
+            <li>TensorFlow Documentation</li>
+          </ul>
+        </div>
+        <div class="resource-col">
+          <h3><i class="fa-solid fa-chalkboard-user"></i> Free Platforms</h3>
+          <ul>
+            <li>Harvard CS50</li>
+            <li>freeCodeCamp</li>
+            <li>Kaggle Learn</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cert-grid">
+        <div class="cert-col cert-free">
+          <h3><i class="fa-solid fa-gift"></i> Free Certifications</h3>
+          <ul>
+            <li>Harvard CS50 (free course)</li>
+            <li>freeCodeCamp Certifications</li>
+            <li>Kaggle Learn Badges</li>
+            <li>Cisco Networking Academy</li>
+          </ul>
+        </div>
+        <div class="cert-col cert-paid">
+          <h3><i class="fa-solid fa-crown"></i> Paid Certifications</h3>
+          <ul>
+            <li>Google AI Essentials</li>
+            <li>Microsoft Azure AI Fundamentals (AI-900)</li>
+            <li>AWS Cloud Practitioner</li>
+            <li>IBM AI Developer Professional Certificate</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT PAGE ===== -->
+  <section id="view-about" class="view hidden">
+    <div class="page-container about-container">
+      <div class="page-header">
+        <div class="icon-circle circle-blue"><i class="fa-solid fa-circle-info"></i></div>
+        <h2>About SkillMap AI</h2>
+      </div>
+      <p>SkillMap AI helps learners identify the skills, projects, certifications, and learning roadmap required to achieve their desired career using AI.</p>
+
+      <div class="about-cards">
+        <div class="about-card">
+          <i class="fa-solid fa-bolt"></i>
+          <h4>AI-Powered Guidance</h4>
+          <p>Get personalized roadmaps using advanced AI.</p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-bullseye"></i>
+          <h4>Career Focused</h4>
+          <p>Designed to help you achieve your dream career.</p>
+        </div>
+        <div class="about-card">
+          <i class="fa-solid fa-gauge-high"></i>
+          <h4>Learn Smarter</h4>
+          <p>Save time and learn the right skills efficiently.</p>
+        </div>
+      </div>
+
+      <div class="developer-card">
+        <div class="profile-circle">F</div>
+        <div>
+          <h3 style="margin-top:0;">Developer</h3>
+          <p style="text-align:left; margin-bottom:8px;">Fatima</p>
+          <div class="social-links">
+            <a href="mailto:youremail@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" target="_blank"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Technologies Used</h3>
+      <div class="tech-tags">
+        <span>HTML, CSS, JavaScript</span>
+        <span>Tailwind CSS</span>
+        <span>Gemini API</span>
+        <span>Vercel</span>
+      </div>
+
+      <h3>Version</h3>
+      <p>1.0</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
