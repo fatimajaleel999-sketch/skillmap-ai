@@ -7,7 +7,7 @@ SkillMap AI was built to solve a major problem for students, beginners, fresh gr
 ---
 
 ## 🔗 Live Deployed URL
-👉 **[Live App Link](https://skillmap-ai-fatima-0984.vercel.app/)**  
+👉 **[Live App Link](https://skillmap-4tgajrdlv-fatima-0984.vercel.app?_vercel_share=yZWuspuluSQEC3Rt8tf9dSR1duXLxXI3/)**  
 *(Note: Please replace/check this link if deployed to a different Vercel URL. Make sure to set your `GEMINI_API_KEY` env variable on Vercel's project dashboard settings.)*
 
 ---
