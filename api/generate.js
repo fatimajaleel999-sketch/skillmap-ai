@@ -5,7 +5,9 @@ export default async function handler(req, res) {
 
   const { careerGoal, skillLevel, currentSkills, studyTime, duration } = req.body;
 
-  const apiKey = process.env.GEMINI_API_KEY;
+ const apiKey = process.env.GEMINI_API_KEY;
+
+console.log("API Key Loaded:", apiKey ? "YES" : "NO");
 
   const systemPrompt = `You are an expert career mentor.
 

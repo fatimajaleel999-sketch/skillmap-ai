@@ -7,7 +7,7 @@ SkillMap AI was built to solve a major problem for students, beginners, fresh gr
 ---
 
 ## 🔗 Live Deployed URL
-👉 **[Live App Link](https://skillmap-ai-five.vercel.app/)**  
+👉 **[Live App Link](https://skillmap-ai-fatima-0984.vercel.app/)**  
 *(Note: Please replace/check this link if deployed to a different Vercel URL. Make sure to set your `GEMINI_API_KEY` env variable on Vercel's project dashboard settings.)*
 
 ---
@@ -69,10 +69,21 @@ Respond ONLY with valid JSON in this exact structure, no markdown formatting, no
 ## 📸 Screenshots
 *(Below are placeholder layout listings. Please add real screenshot files to your repository once running!)*
 1. **Landing View**: Modern hero gradients, interactive timeline cards, and career stats.
+![alt text](image.png)
 2. **Career Questionnaire**: Progress-guided steps with animated transitions.
+![alt text](image-7.png)
 3. **AI Results Dashboard**: Detailed vertical timeline with checking controls, progress indicator, and gap summaries.
+![alt text](image-6.png)
 4. **Learning Resources**: Searchable database of YouTube channels, documentations, and certifications.
-
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+5. **About SkillMap AI**:
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
 ---
 
 ## 💻 How to Run Locally
